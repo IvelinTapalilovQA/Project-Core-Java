@@ -11,7 +11,7 @@ public class TheBiggestNum {
         int counter = 1;
 
         for (int i = 0; i < arrayNums.length; i++) {
-            System.out.println("Enter the " + (counter + i) + " number in the array: ");
+            System.out.println("Enter the " + (counter + i) + " number in the array of 5 numbers: ");
             arrayNums[i] = input.nextInt();
         }
 
