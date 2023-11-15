@@ -8,7 +8,6 @@ public class TwoDimArrayExercise {
 
         int[][] matrix = new int[5][5];
 
-
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
                     matrix[row][col] = row * matrix[col].length + col + 1;
