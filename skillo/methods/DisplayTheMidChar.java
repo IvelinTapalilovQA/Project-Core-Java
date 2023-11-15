@@ -16,7 +16,8 @@ public class DisplayTheMidChar {
         String chars = "";
         if (word.length() % 2 == 0) {
             chars = word.substring(word.length() / 2 - 1, word.length() / 2 + 1);
-        } else {
+        }
+        else {
             chars += word.charAt(word.length() / 2);
         }
         System.out.print("The middle characters of the string are: ");
