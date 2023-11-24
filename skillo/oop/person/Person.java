@@ -61,7 +61,7 @@ public class Person {
     }
 
     private void setDateOfBirth(String egn) {
-        String month = egn.substring(3, 5);
+        String month = egn.substring(2, 4);
         String date  = egn.substring(4, 6);
         this.dateOfBirth = (month+"-"+date);
 
