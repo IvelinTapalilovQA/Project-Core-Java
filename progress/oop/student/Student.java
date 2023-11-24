@@ -33,14 +33,14 @@ public class Student {
 
     public Double getAverageGrade() {
         Double averageGrade = 0.0;
-        int counter = 0;
+        int size = 0;
         if(!exams.isEmpty()){
             Collection<Double> grades = exams.values();
+            size = grades.size();
             for(Double grade : grades){
                 averageGrade += grade;
-                counter++;
             }
         }
-        return (averageGrade /= counter);
+        return (averageGrade /= size );
     }
 }
