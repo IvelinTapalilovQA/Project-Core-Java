@@ -18,7 +18,12 @@ public class Main {
         System.out.println(("Execute individual actions for class " + italian.getClass().getSimpleName()));
         italian.cookingItalianFood();
 
+        System.out.println(american.getDateOfBirth());
+        System.out.println(american.getAge());
+        System.out.println(american);
+
     }
+
     private static void executePersonActions(Person person){
         System.out.println(("Execute actions for class " + person.getClass().getSimpleName()));
         person.sayHello();

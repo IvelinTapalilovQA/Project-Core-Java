@@ -11,7 +11,7 @@ public class Person {
     private String job;
     private String nationality;
     private String egn;
-    private int dateOfBirth;
+    private String dateOfBirth;
     private int age;
     private String countryOfResidence;
 
@@ -56,12 +56,20 @@ public class Person {
         }else throw new RuntimeException("The length of EGN must be exactly 10 digits!");
     }
 
-
-    private void setDateOfBirth(String egn) {
-        String date = egn.substring(4, 6);
-        this.dateOfBirth = Integer.parseInt(date);
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
+    private void setDateOfBirth(String egn) {
+        String month = egn.substring(3, 5);
+        String date  = egn.substring(4, 6);
+        this.dateOfBirth = (month+"-"+date);
+
+    }
+
+    public int getAge() {
+        return age;
+    }
 
     private void setAge(String egn) {
         String age = egn.substring(0, 2);
@@ -69,11 +77,10 @@ public class Person {
         int yearNow;
         if (age.startsWith("0") || age.startsWith("1")) {
             year = 2000 + Integer.parseInt(age);
-            yearNow = LocalDate.now().getYear();
         } else {
             year = 1900 + Integer.parseInt(age);
-            yearNow = LocalDate.now().getYear();
         }
+        yearNow = LocalDate.now().getYear();
         this.age = (yearNow - year);
     }
 
@@ -105,5 +112,21 @@ public class Person {
 
     boolean canTakeLoan() {
         return job != null;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", religion='" + religion + '\'' +
+                ", languageSpeaking='" + languageSpeaking + '\'' +
+                ", job='" + job + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", egn='" + egn + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", age=" + age +
+                ", countryOfResidence='" + countryOfResidence + '\'' +
+                '}';
     }
 }
