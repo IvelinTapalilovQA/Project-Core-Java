@@ -1,6 +1,5 @@
 package progress.oop.student;
 
-import java.util.Collection;
 import java.util.HashMap;
 
 public class Student {
@@ -33,14 +32,11 @@ public class Student {
 
     public Double getAverageGrade() {
         Double averageGrade = 0.0;
-        int size = 0;
         if(!exams.isEmpty()){
-            Collection<Double> grades = exams.values();
-            size = grades.size();
-            for(Double grade : grades){
+            for(Double grade : exams.values()){
                 averageGrade += grade;
             }
         }
-        return (averageGrade /= size );
+        return (averageGrade /= exams.size() );
     }
 }
