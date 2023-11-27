@@ -17,13 +17,13 @@ public class Person {
 
     public Person(String name, String sex, String religion, String languageSpeaking, String job, String nationality, String egn, String countryOfResidence) {
         this.name = name;
-        setSex(sex);
         this.religion = religion;
         this.languageSpeaking = languageSpeaking;
         this.job = job;
         this.nationality = nationality;
-        setEgn(egn);
         this.countryOfResidence = countryOfResidence;
+        setSex(sex);
+        setEgn(egn);
         setDateOfBirth(egn);
         setAge(egn);
     }
